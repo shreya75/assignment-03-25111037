@@ -95,5 +95,44 @@ while True:
     new_count += 1        
 
     new_avg = round(sum(marks) / len(marks), 2)
+
 ### Task 3 - Class Performance Summary
+class_data = [
+    ("Ayesha Sharma",  [88, 72, 95, 60, 78]),
+    ("Rohit Verma",    [55, 68, 49, 72, 61]),
+    ("Priya Nair",     [91, 85, 88, 94, 79]),
+    ("Karan Mehta",    [40, 55, 38, 62, 50]),
+    ("Sneha Pillai",   [75, 80, 70, 68, 85]),
+]
+
+pass_count = 0
+fail_count = 0
+averages = []
+topper_name = ""
+topper_avg = 0
+# Requirement1:
+avg = round(sum(marks)/len(marks), 2)
+averages.append(avg)
+result_status = "Pass" if avg >= 60 else "Fail"
+# Requirement2:
+if result_status == "Pass":
+    pass_count += 1
+else:
+    fail_count += 1
+
+if avg > topper_avg:
+    topper_avg = avg
+    topper_name = name
+print(f"{'Name':<18} | {'Average':<7} | Status")
+print("-"*40)
+print(f"{name:<18} | {avg:^7} | {result_status}")
+# Requirement3:
+
+class_avg = round(sum(averages)/len(averages), 2)
+
+print("Passed:", pass_count)
+print("Failed:", fail_count)
+print("Topper:", topper_name, topper_avg)
+print("Class Average:", class_avg)
+
 ### Task 4 - String Manipulation Utility
