@@ -136,3 +136,22 @@ print("Topper:", topper_name, topper_avg)
 print("Class Average:", class_avg)
 
 ### Task 4 - String Manipulation Utility
+essay = "  python is a versatile language. it supports object oriented, functional, and procedural programming. python is widely used in data science and machine learning.  "
+
+clean_essay = essay.strip() # to remove leading and trailing whitespace
+
+print(clean_essay.title()) # to convert to title case
+
+count = clean_essay.count("python") # to count occurrences of python word
+print(count)
+
+replaced = clean_essay.replace("python", "Python 🐍") # to replace python word
+print(replaced)
+
+sentences = clean_essay.split(". ") #  to split into sentences
+print(sentences)
+
+for i, s in enumerate(sentences, 1):
+    if not s.endswith("."):
+        s += "."
+    print(f"{i}. {s}")
